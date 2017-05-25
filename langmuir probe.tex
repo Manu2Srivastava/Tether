@@ -1,0 +1,159 @@
+\documentclass[12pt, a4paper, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
+\usepackage{titlesec}
+\usepackage{vmargin}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{url}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{listings}
+%\usepackage[centerlast,small,sc]{caption}
+\usepackage[justification=centering]{caption}%for center aligning the image captions
+
+\usepackage[square, numbers, comma, sort&compress]{natbib} % Standard reference style with [3], [4] type numbers in the text and entries sorted according to order of appearance in the References
+\usepackage[pdfpagemode={UseOutlines},bookmarks=true,bookmarksopen=true,bookmarksopenlevel=0,bookmarksnumbered=true,hypertexnames=false,colorlinks,linkcolor={black},citecolor={black},urlcolor={black},pdfstartview={FitV},unicode,breaklinks=true]{hyperref}
+\hypersetup{urlcolor=black, colorlinks=true} % colors hyperlinks in blue - change to black if annoying
+\usepackage{float}
+\DeclareMathOperator*{\argmin}{argmin}
+%\OnehalfSpacing
+
+%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries\centering}
+{\chaptertitlename\ \thechapter}{18pt}{\Huge}
+\titlespacing{\chapter}{0pt}{-50pt}{10pt}%To reduce spacing on top of chapter titles
+
+\setmarginsrb   { 3.0cm}  % left margin
+{ 2.5cm}  % top margin
+{ 2.0cm}  % right margin
+{ 2.2cm}  % bottom margin
+{ 0.3cm}  % head height
+{ 1.2cm}  % head sep
+{ 0.3pt}  % foot height
+{ 1.0cm}  % foot sep
+
+\begin{document}
+	
+	%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+	%   TITLEPAGE
+	%
+	%   due to variety of titlepage schemes it is probably better to make titlepage manually
+	%
+	%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+	\thispagestyle{empty}
+	
+	{%%%
+		\sffamily
+		\centering
+		\Large
+		
+		~\vspace{\fill}
+		
+		{\huge 
+			\bfseries{ADVITIY\\ \bigskip IIT BOMBAY STUDENT SATELLITE}
+		}
+		
+		\vspace{2cm}
+		
+		{\LARGE
+			\bfseries{Langmuir Probe using Tether - Review\\ \bigskip Payload Subsystem}
+		}
+		
+		\vspace{2cm}
+		
+		By \\ \bigskip \bfseries{Manu Srivastava}
+		
+		\vspace{1.5cm}
+		
+		%\includegraphics[scale=1]{Figures/IITB_and_PRATHAM_Logos.png}
+		
+		
+		\vspace{2.5cm}
+		\bfseries{Department of Physics, \\ \bigskip Indian Institute of Technology, Bombay\\ \bigskip
+			May 2017}
+		
+		%%%
+	}%%%
+	
+	%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+	%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+	
+
+	%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+	%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%---%%%
+	
+	\chapter{LANGMUIR PROBE}
+	A Langmuir probe is a device used to determine the electron temperature, electron density, and electric potential of a plasma. It works by inserting one or more electrodes into a plasma, with a constant or time-varying electric potential between the various electrodes or between them and the surrounding vessel. The measured currents and potentials in this system allow the determination of the physical properties of the plasma.
+	\section{DEBYE SHEATH}
+	
+	The Debye sheath is the transition from a plasma to a solid surface.The Debye sheath (also electrostatic sheath) is a layer in a plasma which has a greater density of positive ions, and hence an overall excess positive charge, that balances an opposite negative charge on the surface of a material with which it is in contact.
+	
+	A Debye sheath arises in a plasma because the electrons usually have a temperature on the order of magnitude or greater than that of the ions and are much lighter. Consequently, they are faster than the ions by at least a factor of square root of
+	m i / m e  
+	. At the interface to a material surface, therefore, the electrons will fly out of the plasma, charging the surface negative relative to the bulk plasma.
+	 
+	
+	
+	\section{THEORY}
+The beginning of Langmuir probe theory is the I-V characteristic of the Debye sheath, that is, the current density flowing to a surface in a plasma as a function of the voltage drop across the sheath. the study of this I-V characteristic can then be used to derive various plasma parameters like the electron temperature, electron density, and electric potential of the plasma.
+
+\includegraphics{iv char.png}
+
+In the ion saturation region the probe potential is kept sufficiently negative w.r.t. the plasma to repel e- and attract ions.
+In the e- retardation region the probe potential is kept similar to that of the plasma to gain in ions as well as e-.
+In the e- saturation region the probe potential is kept sufficiently positive w.r.t. the plasma to repel ions and attract e-.
+
+	\subsection{Some Equations}
+	
+The quantitative physics of the Debye sheath is determined by four phenomena:
+Energy conservation of the ions: If we assume for simplicity cold ions of mass 
+m i
+entering the sheath with a velocity 
+u 0 
+, having charge opposite to the electron, conservation of energy in the sheath potential requires:
+
+\includegraphics{equations.png}
+
+
+
+Using these equations ,we derive the ion density from the ion saturation part of the plot ,electron temperature and plasma potential from electron retardation part and electron density from the electron saturation part. 
+
+	
+
+	
+	\section{PROBE TYPES}
+	Langmuir probes come in many types :
+	e.g. single ,double and triple electrode probes.
+	
+	Important points are that there is a need for a definite ground in case of the single probe whereas in case  of the double probe the potential difference between the 2 electrodes only needs to be considered and therefore no need of a definite ground.
+	
+	
+	\section{Tether as LM}
+	The collection mechanism of tether requires some portion of it to remain bare and in contact with the plasma in the ionosphere. This bare part can act as a single langmuir probe . 
+	\section{Problems Faced}
+	1. Proper interpretation of probe data is extremely difficult. 
+	Many small disturbances have to be accounted for inn the existing theory. e.g. the theoretical equations need the plasma to be static, i.e. the ions and the e- in the plasma shoud have negligible kinetic energy. this is of course not the case in the ionosphere.
+	
+	2. The tether can only be used as a single probe. And single probes require a definite ground. for satellite missions the ground is assumed to be the potential of the satellite body itself. But when the satellite moves through in the plasma , it collects ions and e- that keep changing the potential of the satellite body. thus disturbing the definite ground needed for the proper functioning of the probe.
+	
+	Further if we put an additional electrode to make the setup work as a double probe and thereby eliminating the definite ground problem, we could as well put 2 electrodes and make the entire langmuir probe independent of the tether. Thus this method violates the very purpose of the study i.e. to implement the probe using tether.
+	
+	\section{POSSIBLE SOLUTIONS AND REPERCUSSIONS}
+	
+	The only possible solution found in the literature to bypass the definite ground problem is to make the size ratio of the satellite to the probe to be very large. we cannot increase the size of satellite . And decreasing the probe size would mean decreasing the bare part of the tether which would mean leeser collection of e- . this will hamper the basic funcion the tether needs to perform i.e. of de-orbiting.
+	
+	\section{CONCLUSION}
+	Above points considered , implementing the tether as a langmuir probe doesn't seem feasible.
+	
+	 
+\end{document}
+
